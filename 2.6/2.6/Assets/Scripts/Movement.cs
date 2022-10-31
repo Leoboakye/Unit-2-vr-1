@@ -20,4 +20,5 @@ public class Movement : MonoBehaviour
     {
         transform.Translate(Xmove* Time.deltaTime);
     }
+
 }
