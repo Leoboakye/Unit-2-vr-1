@@ -22,5 +22,7 @@ public class Keybind : MonoBehaviour
         yMovement = Input.GetAxis("Vertical")*speed;
         xmove = new Vector2(xMovement, yMovement);
         player.Translate(xmove*Time.deltaTime);
+        Vector2 flip = new Vector2(-1.0f, 1.0f);
+        transform.localScale *= flip;
     }
 }
