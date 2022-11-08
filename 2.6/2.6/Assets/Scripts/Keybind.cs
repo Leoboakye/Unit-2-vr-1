@@ -9,6 +9,8 @@ public class Keybind : MonoBehaviour
     Vector2 xmove;
     float xMovement;
     float yMovement;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +20,28 @@ public class Keybind : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMovement = Input.GetAxis("Horizontal")*speed;
-        yMovement = Input.GetAxis("Vertical")*speed;
+        xMovement = Input.GetAxis("Horizontal") * speed;
+        yMovement = Input.GetAxis("Vertical") * speed;
         xmove = new Vector2(xMovement, yMovement);
-        player.Translate(xmove*Time.deltaTime);
-        Vector2 flip = new Vector2(-1.0f, 1.0f);
-        transform.localScale *= flip;
+        player.Translate(xmove * Time.deltaTime);
+       
+        if (Input.GetAxis("Horizontal") > 0)
+
+        {
+            player.localScale = new Vector3(5.0f, 5.0f,1.0f);
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            player.localScale = new Vector3(-5.0f, 5f,1.0f);
+        }
     }
+        
+
+
+
+
+     
 }
+
+

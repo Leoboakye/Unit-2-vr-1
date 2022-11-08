@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 154992279}
   - component: {fileID: 154992284}
   - component: {fileID: 154992283}
+  - component: {fileID: 154992285}
   m_Layer: 0
   m_Name: player-idle-4
   m_TagString: Untagged
@@ -289,6 +290,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!95 &154992285
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154992278}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b7265657c4a418479316f7abd0d0b39, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +403,8 @@ GameObject:
   - component: {fileID: 539373466}
   - component: {fileID: 539373465}
   - component: {fileID: 539373464}
+  - component: {fileID: 539373467}
+  - component: {fileID: 539373468}
   m_Layer: 0
   m_Name: frog-jump-1
   m_TagString: Untagged
@@ -467,6 +489,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &539373467
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539373463}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &539373468
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539373463}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.35, y: 0.32}
+    newSize: {x: 0.35, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.145, y: 0.16}
+      - {x: -0.175, y: 0.14}
+      - {x: -0.175, y: -0.11}
+      - {x: -0.085, y: -0.16}
+      - {x: 0.175, y: -0.16}
+      - {x: 0.175, y: -0.06}
+      - {x: 0.015, y: 0.16}
 --- !u!1 &657813336
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +554,7 @@ GameObject:
   - component: {fileID: 657813338}
   - component: {fileID: 657813337}
   - component: {fileID: 657813340}
+  - component: {fileID: 657813341}
   m_Layer: 0
   m_Name: eagle-attack-1
   m_TagString: Untagged
@@ -557,7 +633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657813336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.66, y: 1.76, z: 0}
+  m_LocalPosition: {x: 7.36, y: 3.61, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -601,6 +677,27 @@ PolygonCollider2D:
       - {x: 0.089999996, y: -0.185}
       - {x: 0.17, y: -0.015}
       - {x: 0.17, y: 0.13499999}
+--- !u!50 &657813341
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657813336}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &803487705
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +753,8 @@ GameObject:
   - component: {fileID: 1164550952}
   - component: {fileID: 1164550951}
   - component: {fileID: 1164550954}
+  - component: {fileID: 1164550953}
+  - component: {fileID: 1164550955}
   m_Layer: 0
   m_Name: opossum-1
   m_TagString: Untagged
@@ -728,6 +827,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1164550953
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164550950}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &1164550954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +860,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54266c5c1af495242bde99404aeb0773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &1164550955
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164550950}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.28}
+    newSize: {x: 0.36, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14999999, y: 0.14}
+      - {x: -0.17, y: 0.13}
+      - {x: -0.17999999, y: 0.11}
+      - {x: -0.17999999, y: -0.12}
+      - {x: -0.16, y: -0.14}
+      - {x: 0.06, y: -0.14}
+      - {x: 0.13, y: -0.099999994}
+      - {x: 0.13, y: 0.11}
+      - {x: 0.12, y: 0.14}
 --- !u!1 &1926130443
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926130443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.006, y: -0.105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 803487707}
