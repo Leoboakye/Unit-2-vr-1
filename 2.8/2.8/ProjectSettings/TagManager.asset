@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - acorn
+  - ground
+  - enemy
+  - health
+  - tp
   layers:
   - Default
   - TransparentFX
